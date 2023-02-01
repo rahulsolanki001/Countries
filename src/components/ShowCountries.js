@@ -13,9 +13,6 @@ const ShowCountries=({fetchCountries,countries,lightTheme})=>{
         getCountries();
     },[])
 
-    // At once only 20 countries must be rendered
-    countries=countries.slice(0,20);
-
     return(
         <div className={`${styles.countries} ${lightTheme ? null :styles.dark}`}>
             {countries.length==0  ? <h1>Loading...</h1> : 
