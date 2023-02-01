@@ -1,0 +1,40 @@
+
+.filter{
+    margin-right: 10%;
+    width: 10vw;
+    border: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding-left: 1ch;
+    font-style: italic;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dark{
+    border-color: hsl(200, 15%, 8%);
+    box-shadow: 3px 3px black;
+}
+
+.light{
+    border-color: hsl(0, 0%, 98%);
+    box-shadow: 3px 3px whitesmoke;
+}
+
+
+/* ------------------Mobiles---------------- */
+@media screen and (max-width:450px) {
+    .filter{
+        width: 50%;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+}
+
+
+/* -------------Tablets & laptops(small)------------------ */
+@media screen and (min-width:500px) and (max-width:1024px) {
+    .filter{
+        width: 20%;
+    }
+}
