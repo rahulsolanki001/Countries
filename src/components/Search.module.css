@@ -1,0 +1,59 @@
+.search{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    width: 20vw;
+    height: 5vh;
+    border: 2px solid hsl(0, 0%, 98%);
+    border-radius: 5px;
+    box-shadow: 3px 3px whitesmoke;
+}
+
+
+.search:focus-within{
+    border: 2px solid lightblue;
+}
+
+.search span{
+    width: 10%;
+    border:0ch;
+    background-color: white;
+    padding-top: 1ch;
+    padding-left: 1ch;
+    fill-opacity: 0.5;
+}
+
+.search input{
+    outline: 0ch;
+    padding-left: 0ch;
+    border: 0ch;
+    width: 90%;
+}
+
+.search input::placeholder{
+    padding-left: 1ch;
+}
+
+
+.dark{
+    border-color: hsl(200, 15%, 8%);
+    box-shadow: 3px 2px black;
+    border-radius: 5px;
+}
+
+
+/* --------------------Mobiles--------------------- */
+@media screen and (max-width:450px) {
+    .search{
+        width: 90%;
+    }
+    
+}
+
+
+/* -----------------Tablets & Laptops(small)----------------------- */
+@media screen and (min-width:500px) and (max-width:1020px) {
+    .search{
+        width: 30%;
+    }
+}
