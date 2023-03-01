@@ -7,14 +7,17 @@ import { themeChange } from "@/actions/themeAction";
 const Navbar=({themeChange,lightTheme})=>{
     const [lightMode,setLightMode]=useState(true);
 
-    
+    const changeTheme=()=>{
+        const updatedTheme= lightTheme ? false : true
+        themeChange(updatedTheme)
+    }
     
     
     return(
         <>
         <nav className={`${styles.navbar} ${lightTheme ? styles.light : styles.dark}`} >
             <h1>Where in the world?</h1>
-            <button className={`${lightTheme ? null : styles.dark}`} onClick={()=>{setLightMode(!lightMode);themeChange(lightMode)}}>{lightMode ? <FontAwesomeIcon icon={ faMoon} />:<FontAwesomeIcon icon={faLightbulb} /> } {lightMode ? "Dark" : "Light"} Mode</button>
+            <button className={`${lightTheme ? null : styles.dark}`} onClick={()=>{changeTheme()}>{lightMode ? <FontAwesomeIcon icon={ faMoon} />:<FontAwesomeIcon icon={faLightbulb} /> } {lightMode ? "Dark" : "Light"} Mode</button>
         </nav>
         </>
     )
