@@ -14,7 +14,6 @@ const All=({lightTheme})=>{
             <Filter/>
         </div>
         <ShowCountries/>
-        <Link href="/">Go Back</Link>
     </div>
     )
 }
